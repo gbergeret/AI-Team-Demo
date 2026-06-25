@@ -23,6 +23,13 @@ This is not one agent, it is a small team. Three roles:
 
 Load the role you are acting as before you start.
 
+## Effort
+Each subagent sets its reasoning effort in its `.claude/agents/<role>.md`
+frontmatter (`effort:` — one of `low`, `medium`, `high`, `xhigh`, `max`). Match
+it to the role: heavier reasoning for judgement, lighter for routine execution.
+The CoS runs in the main session, so its effort is your Claude Code session
+effort, not a file setting.
+
 ## How work flows
 CoS reads the request, decides do-it or delegate, and hands execution to the EA.
 For anything non-trivial CoS runs the QA loop: QA checks the work against the
