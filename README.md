@@ -12,7 +12,9 @@ now shared across a team.
 - `CLAUDE.md`: the startup routine, read on every session.
 - `MEMORY.md`: the team's shared memory (role-specific memory lives in each
   role's folder).
-- `context/VOICE.md`: how you want it to write and talk to you.
+- `context/`: loaded on demand via `context/INDEX.md`. `VOICE.md` (how to write)
+  and `PROFILE.md` (who you are: what you do, where you live), filled in by the
+  first-run setup.
 - `roles/<role>/`: one folder per role, each with `ROLE.md` (what it does) and
   `MEMORY.md` (what it has learned). Roles: `cos` (front door), `ea`, `qa`.
 
