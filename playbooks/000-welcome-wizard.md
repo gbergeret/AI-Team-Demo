@@ -6,8 +6,9 @@ now on. It runs once: when it finishes, it saves your answers and cleans up afte
 itself (removing the wizard and its first-run hook) in a single pull request.
 
 ## When to run
-On the first session, if `MEMORY.md` still shows the placeholder name under
-"About you". Once onboarding is done, this file is gone and it never runs again.
+On the first session, if `context/PROFILE.md` still shows the placeholder name
+("(not set yet)"). Once onboarding is done, this file is gone and it never runs
+again.
 
 ## How to run
 Ask one question at a time. Keep it warm and brief, and accept whatever the
@@ -16,25 +17,27 @@ are done, write the answers to the files and show what you saved.
 
 ### Questions (keep it to these, do not add more)
 1. **What should I call you?**
-   Save to `MEMORY.md`, under "About you".
+   Save to `context/PROFILE.md` (Name).
 2. **How do you like to be spoken to?** (for example: direct, warm, formal,
    concise, a mix)
    Save to `context/VOICE.md`.
 3. **What do you do?** One line about your work or field.
-   Save to `MEMORY.md`, under "About you".
-4. **What language should I reply in?**
-   Save to `MEMORY.md`, under "About you".
+   Save to `context/PROFILE.md` (What you do).
+4. **Where do you live?**
+   Save to `context/PROFILE.md` (Where you live).
+5. **What language should I reply in?**
+   Save to `context/PROFILE.md` (Language).
 
 ## After the interview
-- Write each answer into the right section of `MEMORY.md` and `context/VOICE.md`,
-  replacing the placeholders. Keep it tidy and well organised.
+- Write each answer into the right place in `context/PROFILE.md` and
+  `context/VOICE.md`, replacing the placeholders. Keep it tidy.
 - Delete this playbook (`playbooks/000-welcome-wizard.md`): one-time setup, not
   needed once it has run.
 - Clean up `CLAUDE.md`: remove the "## First run: the welcome wizard" section, so
   nothing points at the deleted playbook.
-- Open a pull request with all of these changes together (the filled-in memory,
-  the removed wizard, and the cleaned-up `CLAUDE.md`). The PR is the record of
-  your onboarding.
+- Open a pull request with all of these changes together (the filled-in profile,
+  the voice, the removed wizard, and the cleaned-up `CLAUDE.md`). The PR is the
+  record of your onboarding.
 - Confirm in one line: "I have opened a PR with your details and removed the
   setup wizard. Review and merge it and you are set. You can change any of this
   any time."
