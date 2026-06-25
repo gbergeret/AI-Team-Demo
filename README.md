@@ -18,9 +18,9 @@ now shared across a team.
 ## How to start
 1. Fork or clone this repo.
 2. Open it in Claude Code.
-3. Talk to it. It reads `CLAUDE.md` first, then your memory and voice. The
-   Chief of Staff triages each request, hands work to the EA, and runs anything
-   non-trivial past QA before it reaches you.
+3. Say **"Hi"** to kick off. On the first run that triggers a quick setup (the
+   welcome wizard); after that the Chief of Staff triages each request, hands
+   work to the EA, and runs anything non-trivial past QA before it reaches you.
 
 ## The progression
 [`ai-agent-base`](https://github.com/gbergeret/ai-agent-base) (one agent) ->
