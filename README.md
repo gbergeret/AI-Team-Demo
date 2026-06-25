@@ -25,6 +25,34 @@ now shared across a team.
    welcome wizard); after that the Chief of Staff triages each request, hands
    work to the EA, and runs anything non-trivial past QA before it reaches you.
 
+## Concepts in this repo
+- **Written memory and context** (`MEMORY.md`, `context/` via `INDEX.md`) —
+  loaded on demand; identity in `PROFILE.md`, tone in `VOICE.md`.
+- **Layered memory** — a shared team `MEMORY.md` plus a per-role
+  `roles/<role>/MEMORY.md`; the more specific layer wins.
+- **Roles and a front-door router** — every request enters through the Chief of
+  Staff, who triages and delegates. Roles live in `roles/<role>/ROLE.md`.
+- **Subagents and context isolation** (`.claude/agents/*.md`) — the EA and QA
+  run in their own fresh context windows, so the orchestrator stays lean.
+- **Tools allow-list** — each subagent lists exactly the tools it may use, and
+  QA is read-only by design. Capability is scoped per role.
+- **The QA loop (the Verifier)** — non-trivial work is checked against the brief;
+  on defects it goes back to the EA, up to 3 rounds, then escalates.
+- **Playbooks** — the welcome wizard, plus `save` and `reload`.
+- **Git as the store** — versioned, diffable, revertable.
+
+## Claude Code files (and Codex equivalents)
+Most of this repo is plain Markdown that copies to any agent runner unchanged:
+`MEMORY.md`, `context/`, the `roles/<role>/` docs, and `playbooks/` (playbooks are
+just SOPs written down, not the Claude "skills" feature). Only a few things are
+genuinely Claude Code-specific:
+
+| This repo (Claude Code) | Codex equivalent |
+|---|---|
+| `CLAUDE.md` (auto-loaded startup file) | `AGENTS.md` |
+| `.claude/agents/*.md` (named subagents) | `.codex/agents/*.toml` (custom agents; not auto-delegated, you delegate explicitly) |
+| the `tools:` allow-list in a subagent | `approval_policy` + `sandbox_mode` in `config.toml` (an approval/sandbox model, not a literal tool allow-list) |
+
 ## The progression
 [`ai-agent-base`](https://github.com/gbergeret/ai-agent-base) (one agent) ->
 `ai-team-base` (a team with a router) ->
