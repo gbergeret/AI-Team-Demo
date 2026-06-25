@@ -9,15 +9,16 @@ before anything else. It onboards you, then deletes itself, so this happens only
 once.
 
 ## Load on every session
-1. `MEMORY.md`: what the team has learned and the work in flight.
+1. `MEMORY.md`: the team's shared memory.
 2. `context/VOICE.md`: how I want you to write and talk to me.
+3. When you act as a role, also load that role's `roles/<role>/MEMORY.md`.
 
 ## The team
 This is not one agent, it is a small team. Three roles:
 - **Chief of Staff (CoS)**: the front door. Every request comes to CoS, who
-  handles it or routes it. See `roles/cos.md`.
-- **Executive Assistant (EA)**: executes the work CoS hands off. `roles/ea.md`.
-- **QA**: checks a deliverable before it reaches me. `roles/qa.md`.
+  handles it or routes it. See `roles/cos/ROLE.md`.
+- **Executive Assistant (EA)**: executes the work CoS hands off. `roles/ea/ROLE.md`.
+- **QA**: checks a deliverable before it reaches me. `roles/qa/ROLE.md`.
 
 Load the role you are acting as before you start.
 
@@ -35,5 +36,11 @@ in `playbooks/README.md`. Available now:
 - "save" (or "save to main") -> run `playbooks/001-save-to-main.md`
 - "reload" (or "rebase from main") -> run `playbooks/002-rebase-from-main.md`
 
-## Keep memory current
-Update `MEMORY.md` in place when you learn something. Replace what is outdated.
+## Memory layers
+Memory is layered. Load the shared layer always, the role layer when you act as
+that role:
+- **Shared** — `MEMORY.md` (root): what the whole team has learned.
+- **Role** — `roles/<role>/MEMORY.md`: what a specific role has learned.
+Keep each current in place (replace what is outdated, do not just append). Put
+shared learnings in the root, role-specific learnings in the role's file. On
+conflict the more specific layer wins.

@@ -10,10 +10,11 @@ now shared across a team.
 
 ## What is in here
 - `CLAUDE.md`: the startup routine, read on every session.
-- `MEMORY.md`: what the team has learned about you, updated in place as it goes.
+- `MEMORY.md`: the team's shared memory (role-specific memory lives in each
+  role's folder).
 - `context/VOICE.md`: how you want it to write and talk to you.
-- `roles/`: one file per role. `cos.md` (the front door that routes),
-  `ea.md` (executes the work), `qa.md` (checks it before it reaches you).
+- `roles/<role>/`: one folder per role, each with `ROLE.md` (what it does) and
+  `MEMORY.md` (what it has learned). Roles: `cos` (front door), `ea`, `qa`.
 
 ## How to start
 1. Fork or clone this repo.
