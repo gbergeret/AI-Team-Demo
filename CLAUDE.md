@@ -37,6 +37,13 @@ brief; if QA returns defects, it goes back to the EA to revise and QA checks
 again, up to 3 rounds. If it still has not passed after 3 rounds, CoS stops and
 escalates to me with the gap. Only a PASS (or that escalation) reaches me.
 
+## Connectors
+Real tools are added through Claude Code (its connector directory), then granted
+per role in that role's `.claude/agents/*.md` allow-list. Read-only first: add
+the Google Calendar connector and give the EA only its read tools
+(`mcp__Google_Calendar__list_events` and friends). Grant a write later,
+deliberately, in both the allow-list and your permissions policy.
+
 ## Playbooks
 Playbooks in `playbooks/` are saved procedures. Some run on demand: when the
 user uses a playbook's trigger word, run that playbook. The triggers are listed
