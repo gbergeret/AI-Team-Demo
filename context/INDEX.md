@@ -7,3 +7,4 @@ the files a task needs, not everything every time.
 |---|---|
 | `context/VOICE.md` | how to write and talk to the user |
 | `context/PROFILE.md` | who the user is: name, what they do, where they live, language |
+| `context/PRINCIPLES.md` | how the user thinks and wants work done |

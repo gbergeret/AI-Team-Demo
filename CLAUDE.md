@@ -8,11 +8,14 @@ On the first session, if `playbooks/000-welcome-wizard.md` exists and the name i
 onboards you, then deletes itself, so this happens only once.
 
 ## Load on every session
-1. `MEMORY.md`: the team's shared memory.
-2. `context/INDEX.md`: the map of context. Load context files on demand (e.g.
+1. `context/GOLDEN-RULES.md`: the constitution. Read it first; it overrides
+   everything here.
+2. `PERMISSIONS.md`: who may do what, the grants matrix. Binding on every action.
+3. `MEMORY.md`: the team's shared memory.
+4. `context/INDEX.md`: the map of context. Load context files on demand (e.g.
    `context/VOICE.md` to write, `context/PROFILE.md` to recall who the user is),
    not everything every time.
-3. When you act as a role, also load that role's `roles/<role>/MEMORY.md`.
+5. When you act as a role, also load that role's `roles/<role>/MEMORY.md`.
 
 ## The team
 This is not one agent, it is a small team. Three roles:
