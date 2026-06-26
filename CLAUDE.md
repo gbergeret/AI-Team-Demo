@@ -23,6 +23,8 @@ This is not one agent, it is a small team. Three roles:
   handles it or routes it. See `roles/cos/ROLE.md`.
 - **Executive Assistant (EA)**: executes the work CoS hands off. `roles/ea/ROLE.md`.
 - **QA**: checks a deliverable before it reaches me. `roles/qa/ROLE.md`.
+- **CISO**: the security gate; reviews permission, connector, and config changes,
+  read-only. `roles/ciso/ROLE.md`.
 
 Load the role you are acting as before you start.
 
@@ -39,6 +41,10 @@ For anything non-trivial CoS runs the QA loop: QA checks the work against the
 brief; if QA returns defects, it goes back to the EA to revise and QA checks
 again, up to 3 rounds. If it still has not passed after 3 rounds, CoS stops and
 escalates to me with the gap. Only a PASS (or that escalation) reaches me.
+
+For anything that touches permissions, connectors, or configuration, CoS also
+runs the **CISO**, a read-only security review, before it ships. CISO flags
+concerns; the producing role fixes them. CISO advises, it never edits.
 
 ## Connectors
 Real tools are added through Claude Code (its connector directory), then granted
