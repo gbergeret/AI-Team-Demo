@@ -42,9 +42,12 @@ brief; if QA returns defects, it goes back to the EA to revise and QA checks
 again, up to 3 rounds. If it still has not passed after 3 rounds, CoS stops and
 escalates to me with the gap. Only a PASS (or that escalation) reaches me.
 
-For anything that touches permissions, connectors, or configuration, CoS also
-runs the **CISO**, a read-only security review, before it ships. CISO flags
-concerns; the producing role fixes them. CISO advises, it never edits.
+Security is a **second gate, after QA — never before**. Only once a deliverable
+has passed the QA loop, and only if it touches permissions, connectors, or
+configuration, CoS runs the **CISO** on that QA-validated work: a read-only
+security review before it ships. If the work is not security-relevant, the CISO
+is skipped. CISO flags concerns; the producing role fixes them (which sends the
+fix back through QA), then the CISO re-checks. CISO advises, it never edits.
 
 ## Connectors
 Real tools are added through Claude Code (its connector directory), then granted
