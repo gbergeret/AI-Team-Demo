@@ -43,6 +43,9 @@ now shared across a team.
   run in their own fresh context windows, so the orchestrator stays lean.
 - **Tools allow-list** — each subagent lists exactly the tools it may use, and
   QA is read-only by design. Capability is scoped per role.
+- **Connectors, read-only first** — real tools are added through Claude Code; the
+  EA gets the Google Calendar connector in read-only mode (reads allowed, writes
+  denied in `.claude/settings.json`), escalated to write only deliberately.
 - **The QA loop (the Verifier)** — non-trivial work is checked against the brief;
   on defects it goes back to the EA, up to 3 rounds, then escalates.
 - **A security gate (the CISO)** (`roles/ciso/ROLE.md`) — a read-only **second
