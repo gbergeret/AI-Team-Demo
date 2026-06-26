@@ -39,6 +39,11 @@ now shared across a team.
 - **The QA loop (the Verifier)** — non-trivial work is checked against the brief;
   on defects it goes back to the EA, up to 3 rounds, then escalates.
 - **Playbooks** — the welcome wizard, plus `save` and `reload`.
+- **Governance** — `context/GOLDEN-RULES.md` (the constitution, loaded first),
+  `PERMISSIONS.md` (the action-tier grants matrix), and `context/PRINCIPLES.md`
+  (how you like work done). A capability is real only when granted in both
+  `PERMISSIONS.md` and the role's allow-list (the two-place model), with a
+  `.claude/settings.json` floor denying what should never happen.
 - **Git as the store** — versioned, diffable, revertable.
 
 ## Claude Code files (and Codex equivalents)
