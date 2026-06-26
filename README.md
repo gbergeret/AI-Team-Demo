@@ -50,6 +50,28 @@ now shared across a team.
   `.claude/settings.json` floor denying what should never happen.
 - **Git as the store** — versioned, diffable, revertable.
 
+## Changing things: the governed flow (advanced)
+Because everything here is plain Markdown in git, the most robust way to change
+anything — memory, context, roles, or the rules themselves — is a real git flow:
+
+1. **Branch** off `main`.
+2. **Edit** the files.
+3. **Open a pull request** and review it — the QA loop checks the change before it
+   lands, the same way it gates any other deliverable.
+4. **Merge** once it passes.
+5. **Revert** to undo — `git revert` drops a bad change and keeps *both* the
+   mistake and its correction in the history, so nothing is silently rewritten.
+
+This is the apex of "git as the store": every change is proposed, reviewed, and
+reversible, with a full audit trail. It is where review matters most — changes to
+rules or permissions belong here. It is also an **advanced** workflow, so for
+everyday use we hide it behind the `save` and `reload` playbooks
+(`001-save-to-main`, `002-rebase-from-main`), which commit straight to `main` in
+one step. The trade-off is deliberate: the playbooks are simple but have **no
+review**; the governed flow adds the review gate and a clean history in exchange
+for a little ceremony. Start with the playbooks; reach for the governed flow when
+a change is worth reviewing before it lands.
+
 ## Claude Code files (and Codex equivalents)
 Most of this repo is plain Markdown that copies to any agent runner unchanged:
 `MEMORY.md`, `context/`, the `roles/<role>/` docs, and `playbooks/` (playbooks are
