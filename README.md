@@ -18,6 +18,12 @@ now shared across a team.
 - `roles/<role>/`: one folder per role, each with `ROLE.md` (what it does) and
   `MEMORY.md` (what it has learned). Roles: `cos` (front door), `ea`, `qa`,
   `ciso` (security gate).
+- `PERMISSIONS.md`: the grants matrix — who may do what (the policy layer).
+- `.claude/agents/`: the EA, QA, and CISO subagents (the CoS is the main session).
+- `.claude/settings.json`: the permission floor for connector tools (read
+  allowed, write denied).
+- `playbooks/`: saved procedures run on a trigger word or a schedule (see
+  `playbooks/README.md`).
 
 ## How to start
 1. Fork or clone this repo.
