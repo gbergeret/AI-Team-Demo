@@ -22,6 +22,7 @@ Both must agree; the stricter wins. **DELETE is never granted.**
 | EA | this repo's files | READ, EDIT, CREATE |
 | EA | external connectors (e.g. calendar) | READ |
 | QA | everything | READ only |
+| CISO | everything | READ only |
 
 Anything not listed stays READ-only. Connectors start read-only; grant a scoped
 write both here and in the role's allow-list, deliberately, when you need it.

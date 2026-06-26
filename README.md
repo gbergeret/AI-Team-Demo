@@ -16,7 +16,8 @@ now shared across a team.
   and `PROFILE.md` (who you are: what you do, where you live), filled in by the
   first-run setup.
 - `roles/<role>/`: one folder per role, each with `ROLE.md` (what it does) and
-  `MEMORY.md` (what it has learned). Roles: `cos` (front door), `ea`, `qa`.
+  `MEMORY.md` (what it has learned). Roles: `cos` (front door), `ea`, `qa`,
+  `ciso` (security gate).
 
 ## How to start
 1. Fork or clone this repo.
@@ -38,6 +39,10 @@ now shared across a team.
   QA is read-only by design. Capability is scoped per role.
 - **The QA loop (the Verifier)** — non-trivial work is checked against the brief;
   on defects it goes back to the EA, up to 3 rounds, then escalates.
+- **A security gate (the CISO)** (`roles/ciso/ROLE.md`) — a read-only **second
+  gate** that runs *after* QA, on QA-validated work, and only when a change
+  touches permissions, connectors, or configuration. It flags concerns; the
+  producing role fixes them (back through QA), never the CISO.
 - **Playbooks** — the welcome wizard, plus `save` and `reload`.
 - **Governance** — `context/GOLDEN-RULES.md` (the constitution, loaded first),
   `PERMISSIONS.md` (the action-tier grants matrix), and `context/PRINCIPLES.md`
