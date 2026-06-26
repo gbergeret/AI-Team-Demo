@@ -43,7 +43,9 @@ now shared across a team.
   gate** that runs *after* QA, on QA-validated work, and only when a change
   touches permissions, connectors, or configuration. It flags concerns; the
   producing role fixes them (back through QA), never the CISO.
-- **Playbooks** — the welcome wizard, plus `save` and `reload`.
+- **Playbooks** — the welcome wizard and `save` / `reload` (trigger-word), plus a
+  **scheduled** one: the daily summary, a read-only morning briefing from your
+  Google Calendar, run by the EA.
 - **Governance** — `context/GOLDEN-RULES.md` (the constitution, loaded first),
   `PERMISSIONS.md` (the action-tier grants matrix), and `context/PRINCIPLES.md`
   (how you like work done). A capability is real only when granted in both
