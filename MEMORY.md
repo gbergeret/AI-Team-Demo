@@ -6,8 +6,9 @@ everyone shares. Who you are lives in `context/PROFILE.md`. Keep it current:
 replace outdated lines in place, do not just append.
 
 ## The team
-- CoS (front door) routes to EA (execution) and QA (quality gate).
-  Roles live in `roles/`.
+- CoS (front door) routes to EA (execution) and QA (quality gate); the CISO is a
+  read-only security gate that runs after QA on permission/connector/config
+  changes. Roles live in `roles/`.
 
 ## In flight
 - Nothing yet. This fills in as we work.
