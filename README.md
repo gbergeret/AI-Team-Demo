@@ -1,8 +1,9 @@
-# ai-team-base
+# AI-Team-Demo
 
-> Workshop 2: from one agent to a team.
+> A demo repo — from one agent to a team.
 
-Where a single assistant becomes an organised team. Several specialist roles,
+A public demo repo, illustrative rather than workshop courseware. Where a single
+assistant becomes an organised team: several specialist roles,
 coordinated by one front-door router (a Chief of Staff), with structured
 delegation and the first layer of governance: scoped, read-only-by-default
 access to real tools. The same written-down, versioned foundation as step 1,
@@ -97,7 +98,14 @@ genuinely Claude Code-specific:
 | the `tools:` allow-list in a subagent | `approval_policy` + `sandbox_mode` in `config.toml` (an approval/sandbox model, not a literal tool allow-list) |
 
 ## The progression
-[`ai-agent-base`](https://github.com/gbergeret/ai-agent-base) (one agent) ->
-`ai-team-base` (a team with a router) ->
-[`ai-teams-base`](https://github.com/gbergeret/ai-teams-base) (an organisation of
+[`AI-Agent-Demo`](https://github.com/gbergeret/AI-Agent-Demo) (one agent) ->
+`AI-Team-Demo` (a team with a router) ->
+[`AI-Teams-Demo`](https://github.com/gbergeret/AI-Teams-Demo) (an organisation of
 teams). This is step 2.
+
+Alongside the ladder,
+[`AI-Engineering-Team-Demo`](https://github.com/gbergeret/AI-Engineering-Team-Demo)
+is the hands-on engineering team the organisation's CTO delegates the building to.
+
+## License
+[MIT](LICENSE) © 2026 GBergeret Cloud Services
