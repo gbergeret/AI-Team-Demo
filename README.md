@@ -90,6 +90,10 @@ now shared across a team.
   token spend and $ cost per agent and per model, read from the session transcript.
   Run it at the end of a session or a scheduled playbook; it makes the honest cost
   of a multi-agent run legible.
+- **A self-documented architecture** (`context/SYSTEM-ARCHITECTURE.md`) — one
+  end-to-end map (request flow, roles, gates, memory, permissions, repo layout) for
+  onboarding or auditing the whole team at a glance; the detail stays in the files
+  it points at.
 - **Git as the store** — versioned, diffable, revertable.
 
 ## Changing things: the governed flow (advanced)
