@@ -72,3 +72,7 @@ that role:
 Keep each current in place (replace what is outdated, do not just append). Put
 shared learnings in the root, role-specific learnings in the role's file. On
 conflict the more specific layer wins.
+
+Active work lives in `projects/` (one folder per project; see `projects/README.md`),
+so memory holds only a one-line pointer, not the project's guts — open a project's
+folder only when the task needs it.
