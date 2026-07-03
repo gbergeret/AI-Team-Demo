@@ -60,8 +60,8 @@ now shared across a team.
   `CLAUDE.md`) — a role is real only when every place that defines it agrees (role
   docs, runtime manifest, roster, permissions). The checklist makes "the team grows
   itself" a reviewable procedure, not an ad-hoc edit.
-- **Subagents and context isolation** (`.claude/agents/*.md`) — the EA and QA
-  run in their own fresh context windows, so the orchestrator stays lean.
+- **Subagents and context isolation** (`.claude/agents/*.md`) — the EA, QA, and
+  CISO run in their own fresh context windows, so the orchestrator stays lean.
 - **Tools allow-list** — each subagent lists exactly the tools it may use, and
   QA is read-only by design. Capability is scoped per role.
 - **Connectors, read-only first** — real tools are added through Claude Code; the
