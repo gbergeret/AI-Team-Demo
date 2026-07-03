@@ -10,5 +10,7 @@ replace outdated lines in place, do not just append.
   read-only security gate that runs after QA on permission/connector/config
   changes. Roles live in `roles/`.
 
-## In flight
-- Nothing yet. This fills in as we work.
+## Projects (work in flight)
+Active work lives in `projects/` — one folder each, with a one-line pointer here so
+this file stays lean. Open a project's folder only when the task needs it.
+- _None yet._ This fills in as we work.

@@ -12,7 +12,10 @@ now shared across a team.
 ## What is in here
 - `CLAUDE.md`: the startup routine, read on every session.
 - `MEMORY.md`: the team's shared memory (role-specific memory lives in each
-  role's folder).
+  role's folder), holding a one-line pointer to each active project.
+- `projects/`: active work, one folder per project (`PROJECT.md` + `LOG.md`), so
+  memory stays lean — opened only when a task needs it. Copy `projects/_TEMPLATE/`
+  to start one; `projects/INDEX.md` maps them.
 - `context/`: loaded on demand via `context/INDEX.md`. `VOICE.md` (how to write)
   and `PROFILE.md` (who you are: what you do, where you live), filled in by the
   first-run setup.
@@ -38,6 +41,11 @@ now shared across a team.
   loaded on demand; identity in `PROFILE.md`, tone in `VOICE.md`.
 - **Layered memory** — a shared team `MEMORY.md` plus a per-role
   `roles/<role>/MEMORY.md`; the more specific layer wins.
+- **Projects — memory that doesn't bloat** (`projects/`) — active work lives one
+  folder per project (`PROJECT.md` + `LOG.md`); memory keeps just a one-line
+  pointer, opened only when the task needs it. Open → run → harvest durable
+  learnings back to memory → archive. The same load-on-demand principle as
+  `context/INDEX.md`, applied to work in flight.
 - **Roles and a front-door router** — every request enters through the Chief of
   Staff, who triages and delegates. Roles live in `roles/<role>/ROLE.md`.
 - **Subagents and context isolation** (`.claude/agents/*.md`) — the EA and QA
