@@ -68,7 +68,9 @@ now shared across a team.
   EA gets the Google Calendar connector in read-only mode (reads allowed, writes
   denied in `.claude/settings.json`), escalated to write only deliberately.
 - **The QA loop (the Verifier)** — non-trivial work is checked against the brief;
-  on defects it goes back to the EA, up to 3 rounds, then escalates.
+  QA grades each finding `[BLOCK]` / `[SUGGEST]` / `[NIT]` / `[QUESTION]`, and only
+  `[BLOCK]` sends it back (up to 3 rounds, then escalate). Graded findings keep the
+  loop fast — fix what matters, don't churn on nits.
 - **A security gate (the CISO)** (`roles/ciso/ROLE.md`) — a read-only **second
   gate** that runs *after* QA, on QA-validated work, and only when a change
   touches permissions, connectors, or configuration. It flags concerns; the
