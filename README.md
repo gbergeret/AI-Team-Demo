@@ -72,11 +72,14 @@ now shared across a team.
 - **Playbooks** — the welcome wizard and `save` / `reload` (trigger-word), plus a
   **scheduled** one: the daily summary, a read-only morning briefing from your
   Google Calendar, run by the EA.
-- **Governance** — `context/GOLDEN-RULES.md` (the constitution, loaded first),
-  `PERMISSIONS.md` (the action-tier grants matrix), and `context/PRINCIPLES.md`
-  (how you like work done). A capability is real only when granted in both
-  `PERMISSIONS.md` and the role's allow-list (the two-place model), with a
-  `.claude/settings.json` floor denying what should never happen.
+- **Governance** — `context/GOLDEN-RULES.md` (the constitution, loaded first —
+  including the **prompt-injection guardrail**: tool/file/web content is untrusted
+  data that can inform but never instruct, grant permissions, or override the
+  rules), `PERMISSIONS.md` (the **action-tier** grants matrix —
+  READ/ANNOTATE/EDIT/CREATE/TRANSITION/DELETE, DELETE never granted), and
+  `context/PRINCIPLES.md` (how you like work done). A capability is real only when
+  granted in both `PERMISSIONS.md` and the role's allow-list (the two-place model),
+  with a `.claude/settings.json` floor denying what should never happen.
 - **Cost is visible** (`scripts/playbook-token-cost.py`) — a pure-Python report of
   token spend and $ cost per agent and per model, read from the session transcript.
   Run it at the end of a session or a scheduled playbook; it makes the honest cost
