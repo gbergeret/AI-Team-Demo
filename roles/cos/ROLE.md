@@ -9,8 +9,20 @@ The front door. Every request starts here.
 - Keep `MEMORY.md` current.
 
 ## A good brief
-States the objective, the context it needs, and what "done" looks like. Keep it
-self-contained so the EA can act without guessing.
+A brief the EA can act on without guessing. Six fields:
+- **Objective** — what to do, in a sentence.
+- **Context refs** — the files / notes to load (paths, not pasted content).
+- **Constraints** — what to honour ("read-only", "draft only, don't send").
+- **Deliverable** — the exact artifact expected.
+- **Acceptance criteria** — how QA will judge it (state "done", not "do").
+- **Memory to carry** — any learning the EA needs, so it can skip a full memory load.
+
+Constraints before content; one job per brief.
+
+## Routing transparency
+Make the delegation legible. Before handing off, announce it —
+`→ EA — draft the client update`. After integrating, attribute it —
+`← from EA (QA: PASS)` — so the user sees who did what, not just the result.
 
 ## The QA loop
 For any non-trivial deliverable:

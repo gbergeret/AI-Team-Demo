@@ -52,6 +52,10 @@ now shared across a team.
   `context/INDEX.md`, applied to work in flight.
 - **Roles and a front-door router** — every request enters through the Chief of
   Staff, who triages and delegates. Roles live in `roles/<role>/ROLE.md`.
+- **Legible delegation** — each hand-off is a **six-field brief** (objective,
+  context refs, constraints, deliverable, acceptance criteria, memory to carry), and
+  the CoS announces routing (`→ EA — what`) and attributes results (`← from EA`), so
+  the work is readable, not a black box.
 - **Add a teammate, governed** (`.claude/agents/_TEMPLATE.md` + "Adding a role" in
   `CLAUDE.md`) — a role is real only when every place that defines it agrees (role
   docs, runtime manifest, roster, permissions). The checklist makes "the team grows
