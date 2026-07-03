@@ -23,7 +23,9 @@ now shared across a team.
   `MEMORY.md` (what it has learned). Roles: `cos` (front door), `ea`, `qa`,
   `ciso` (security gate).
 - `PERMISSIONS.md`: the grants matrix — who may do what (the policy layer).
-- `.claude/agents/`: the EA, QA, and CISO subagents (the CoS is the main session).
+- `.claude/agents/`: the EA, QA, and CISO subagents (the CoS is the main session),
+  plus `_TEMPLATE.md` — the scaffold for adding a new role (see "Adding a role" in
+  `CLAUDE.md`).
 - `.claude/settings.json`: the permission floor for connector tools (read
   allowed, write denied).
 - `playbooks/`: saved procedures run on a trigger word or a schedule (see
@@ -48,6 +50,10 @@ now shared across a team.
   `context/INDEX.md`, applied to work in flight.
 - **Roles and a front-door router** — every request enters through the Chief of
   Staff, who triages and delegates. Roles live in `roles/<role>/ROLE.md`.
+- **Add a teammate, governed** (`.claude/agents/_TEMPLATE.md` + "Adding a role" in
+  `CLAUDE.md`) — a role is real only when every place that defines it agrees (role
+  docs, runtime manifest, roster, permissions). The checklist makes "the team grows
+  itself" a reviewable procedure, not an ad-hoc edit.
 - **Subagents and context isolation** (`.claude/agents/*.md`) — the EA and QA
   run in their own fresh context windows, so the orchestrator stays lean.
 - **Tools allow-list** — each subagent lists exactly the tools it may use, and
