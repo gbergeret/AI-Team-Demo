@@ -28,6 +28,19 @@ This is not one agent, it is a small team. Three roles:
 
 Load the role you are acting as before you start.
 
+## Adding a role
+A role is real only when every place that defines it agrees — so adding one is a
+short checklist, not a single file. Copy `.claude/agents/_TEMPLATE.md` and:
+1. **Create** `roles/<role>/ROLE.md` (its mandate) and `roles/<role>/MEMORY.md`.
+2. **Create** `.claude/agents/<role>.md` (its runtime manifest: tools, model, effort).
+3. **Add it to the roster** in this `CLAUDE.md` (## The team) and in `README.md`.
+4. **Grant its surface** in `PERMISSIONS.md`, and mirror it in the manifest's
+   `tools:` — the two-place model; the stricter of the two wins.
+5. **Open a PR** so the change is reviewed; QA (and the CISO, if it touches
+   permissions or connectors) checks it before it lands.
+Skip a step and the role is half-wired — the manifest exists but nothing routes to
+it, or it holds a tool the policy never granted.
+
 ## Effort
 Each subagent sets its reasoning effort in its `.claude/agents/<role>.md`
 frontmatter (`effort:` — one of `low`, `medium`, `high`, `xhigh`, `max`). Match
