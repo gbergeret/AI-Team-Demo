@@ -119,17 +119,17 @@ review**; the governed flow adds the review gate and a clean history in exchange
 for a little ceremony. Start with the playbooks; reach for the governed flow when
 a change is worth reviewing before it lands.
 
-## Claude Code files (and Codex equivalents)
+## Claude Code files (and Codex / Cursor equivalents)
 Most of this repo is plain Markdown that copies to any agent runner unchanged:
 `MEMORY.md`, `context/`, the `roles/<role>/` docs, and `playbooks/` (playbooks are
 just SOPs written down, not the Claude "skills" feature). Only a few things are
 genuinely Claude Code-specific:
 
-| This repo (Claude Code) | Codex equivalent |
-|---|---|
-| `CLAUDE.md` (auto-loaded startup file) | `AGENTS.md` |
-| `.claude/agents/*.md` (named subagents) | `.codex/agents/*.toml` (custom agents; not auto-delegated, you delegate explicitly) |
-| the `tools:` allow-list in a subagent | `approval_policy` + `sandbox_mode` in `config.toml` (an approval/sandbox model, not a literal tool allow-list) |
+| This repo (Claude Code) | Codex | Cursor |
+|---|---|---|
+| `CLAUDE.md` (auto-loaded startup file) | `AGENTS.md` | `.cursor/rules/*.mdc` Project Rules (or a root `AGENTS.md`, which Cursor also reads) |
+| `.claude/agents/*.md` (named subagents) | `.codex/agents/*.toml` (custom agents; not auto-delegated, you delegate explicitly) | Custom Modes (or rules scoped by `globs`) — no auto-delegation; you switch or invoke explicitly |
+| the `tools:` allow-list in a subagent | `approval_policy` + `sandbox_mode` in `config.toml` (an approval/sandbox model, not a literal tool allow-list) | tool/command allowlist in Cursor Settings; MCP servers in `.cursor/mcp.json` |
 
 ## The progression
 [`AI-Agent-Demo`](https://github.com/gbergeret/AI-Agent-Demo) (one agent) ->
