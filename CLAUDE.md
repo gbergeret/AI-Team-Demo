@@ -77,6 +77,10 @@ uses a trigger word), some run on a schedule (a Cadence). The list lives in
 - "reload" (or "rebase from main") -> run `playbooks/002-rebase-from-main.md`
 - daily (scheduled) -> run `playbooks/003-daily-summary.md`: a morning calendar briefing (the EA runs it).
 
+A scheduled or multi-agent playbook can end with `scripts/playbook-token-cost.py` —
+a per-agent, per-model token + $ report read from the session transcript (pure
+Python, costs no model tokens).
+
 ## Memory layers
 Memory is layered. Load the shared layer always, the role layer when you act as
 that role:
