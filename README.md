@@ -30,6 +30,8 @@ now shared across a team.
   allowed, write denied).
 - `playbooks/`: saved procedures run on a trigger word or a schedule (see
   `playbooks/README.md`).
+- `scripts/`: `playbook-token-cost.py` — a per-agent, per-model token + $ cost
+  report read from the session transcript (pure Python, costs no model tokens).
 
 ## How to start
 1. Fork or clone this repo.
@@ -75,6 +77,10 @@ now shared across a team.
   (how you like work done). A capability is real only when granted in both
   `PERMISSIONS.md` and the role's allow-list (the two-place model), with a
   `.claude/settings.json` floor denying what should never happen.
+- **Cost is visible** (`scripts/playbook-token-cost.py`) — a pure-Python report of
+  token spend and $ cost per agent and per model, read from the session transcript.
+  Run it at the end of a session or a scheduled playbook; it makes the honest cost
+  of a multi-agent run legible.
 - **Git as the store** — versioned, diffable, revertable.
 
 ## Changing things: the governed flow (advanced)
