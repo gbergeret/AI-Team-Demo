@@ -34,11 +34,29 @@ now shared across a team.
   report read from the session transcript (pure Python, costs no model tokens).
 
 ## How to start
-1. Fork or clone this repo.
-2. Open it in Claude Code.
-3. Say **"Hi"** to kick off. On the first run that triggers a quick setup (the
-   welcome wizard); after that the Chief of Staff triages each request, hands
-   work to the EA, and runs anything non-trivial past QA before it reaches you.
+
+> **Do not fork this repo.** A fork of a public repo is forced public, and your copy
+> will hold your own private memory and context, so it must stay private. Copy it into
+> a fresh private repo instead (steps below). Only fork if it is purely for a public
+> demo or showcase.
+
+1. **Create a new, empty private repo.** This becomes your own team. It must be
+   **private**: it will hold your personal memory, context, and profile, so it should
+   never be public.
+2. **Start a Claude Code session on that new, empty private repo** (for example,
+   Claude Code on the web).
+3. **Run this prompt** to copy the demo in and set yourself up:
+   ```
+   Copy everything from https://github.com/gbergeret/AI-Team-Demo into this repo and
+   push it all to main in a single commit messaged "Copied from gbergeret/AI-Team-Demo".
+   Then read CLAUDE.md and run the welcome wizard (playbooks/000-welcome-wizard.md) to
+   set me up.
+   ```
+4. **Save your setup.** If you are comfortable with Git, raise a PR to merge into main.
+   If you are a beginner, just ask to save changes and it will run the save-to-main
+   playbook.
+5. **You are set.** From here the Chief of Staff triages each request, hands work to
+   the EA, and runs anything non-trivial past QA before it reaches you.
 
 ## Concepts in this repo
 - **Written memory and context** (`MEMORY.md`, `context/` via `INDEX.md`) —
