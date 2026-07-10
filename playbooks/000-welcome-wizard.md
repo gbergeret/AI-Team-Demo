@@ -47,14 +47,22 @@ are done, write the answers to the files and show what you saved.
     ladder to the other repos).
   - Keep the rest as the owner's reference: "What is in here", "Concepts in this
     repo", the governed-flow section, and the Codex-equivalents note.
+- **Set the update baseline.** So `playbooks/001-update-from-upstream.md` knows where
+  this copy started, record the upstream's current commit as its baseline: read the
+  `Upstream:` repo from that playbook, resolve its latest `main` commit
+  (`git ls-remote https://github.com/<owner/repo> main`, take the SHA), and write that
+  SHA into the playbook's `Last synced:` line, replacing `not set`. You have just copied
+  the demo, so that commit is the true starting point. If the upstream cannot be reached,
+  leave it `not set` - the first update establishes it from the file comparison.
 - Delete this playbook (`playbooks/000-welcome-wizard.md`): one-time setup, not
   needed once it has run.
 - Clean up `CLAUDE.md`: remove the "## First run: the welcome wizard" section, so
   nothing points at the deleted playbook.
 - Commit all of these changes together in a single commit (the filled-in profile, the
-  voice, the personalised `README.md`, the removed wizard, and the cleaned-up
-  `CLAUDE.md`). That commit is the record of your onboarding. Then hand the choice of
-  how to save it to the user, rather than opening a pull request automatically.
+  voice, the personalised `README.md`, the update baseline in playbook 001, the removed
+  wizard, and the cleaned-up `CLAUDE.md`). That commit is the record of your onboarding.
+  Then hand the choice of how to save it to the user, rather than opening a pull request
+  automatically.
 - Close with exactly this: "You're all set now. If you're comfortable with Git, you
   can raise a PR to merge into main. If you're a beginner, just ask me to save changes
   and I'll run the save-to-main playbook."

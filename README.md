@@ -57,6 +57,10 @@ now shared across a team.
    playbook.
 5. **You are set.** From here the Chief of Staff triages each request, hands work to
    the EA, and runs anything non-trivial past QA before it reaches you.
+6. **Stay up to date.** Later, when this demo gains new features, say "update from
+   upstream" to pull the latest template improvements into your copy, safely (your
+   memory, profile, and projects are never touched). See
+   `playbooks/001-update-from-upstream.md`.
 
 ## Concepts in this repo
 - **Written memory and context** (`MEMORY.md`, `context/` via `INDEX.md`) —
@@ -93,7 +97,8 @@ now shared across a team.
   gate** that runs *after* QA, on QA-validated work, and only when a change
   touches permissions, connectors, or configuration. It flags concerns; the
   producing role fixes them (back through QA), never the CISO.
-- **Playbooks** — the welcome wizard and `save` / `reload` (trigger-word), plus a
+- **Playbooks** — the welcome wizard, `save` / `reload`, and `update from upstream`
+  (trigger-word), plus a
   **scheduled** one: the daily summary, a read-only morning briefing from your
   Google Calendar, run by the EA. New ones follow `playbooks/_TEMPLATE.md` (Cadence,
   Scope, Steps, Rules, End-of-run report, Done-when).
@@ -131,7 +136,7 @@ This is the apex of "git as the store": every change is proposed, reviewed, and
 reversible, with a full audit trail. It is where review matters most — changes to
 rules or permissions belong here. It is also an **advanced** workflow, so for
 everyday use we hide it behind the `save` and `reload` playbooks
-(`001-save-to-main`, `002-rebase-from-main`), which commit straight to `main` in
+(`002-save-to-main`, `003-rebase-from-main`), which commit straight to `main` in
 one step. The trade-off is deliberate: the playbooks are simple but have **no
 review**; the governed flow adds the review gate and a clean history in exchange
 for a little ceremony. Start with the playbooks; reach for the governed flow when

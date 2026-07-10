@@ -1,4 +1,4 @@
-# 002 - Rebase from main
+# 003 - Rebase from main
 
 Bring this device up to date with the latest saved work on `main`. The companion
 to "save to main". Run it when the person says "rebase from main" (or "reload"),
