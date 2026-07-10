@@ -73,9 +73,10 @@ deliberately, in both the allow-list and your permissions policy.
 Playbooks in `playbooks/` are saved procedures. Some run on demand (when the user
 uses a trigger word), some run on a schedule (a Cadence). The list lives in
 `playbooks/README.md`. Available now:
-- "save" (or "save to main") -> run `playbooks/001-save-to-main.md`
-- "reload" (or "rebase from main") -> run `playbooks/002-rebase-from-main.md`
-- daily (scheduled) -> run `playbooks/003-daily-summary.md`: a morning calendar briefing (the EA runs it).
+- "update from upstream" (or "check for updates") -> run `playbooks/001-update-from-upstream.md`: pull the latest template updates from the original demo.
+- "save" (or "save to main") -> run `playbooks/002-save-to-main.md`
+- "reload" (or "rebase from main") -> run `playbooks/003-rebase-from-main.md`
+- daily (scheduled) -> run `playbooks/004-daily-summary.md`: a morning calendar briefing (the EA runs it).
 
 A scheduled or multi-agent playbook can end with `scripts/playbook-token-cost.py` —
 a per-agent, per-model token + $ report read from the session transcript (pure

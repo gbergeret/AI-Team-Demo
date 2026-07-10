@@ -1,4 +1,4 @@
-# 003 - Daily summary
+# 004 - Daily summary
 
 **Cadence:** Daily (scheduled). Set this up as a recurring routine in Claude Code
 so it runs each morning.

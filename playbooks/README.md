@@ -23,6 +23,8 @@ recurring request can *be* a playbook — write it down once, run it many times.
 
 ## Playbooks here
 - `000-welcome-wizard.md`: first-run onboarding. Runs once, then deletes itself.
-- `001-save-to-main.md`: save your work to the cloud (say "save to main").
-- `002-rebase-from-main.md`: update to the latest saved work (say "rebase from main").
-- `003-daily-summary.md`: a morning briefing from your calendar (scheduled, read-only).
+- `001-update-from-upstream.md`: pull the latest template updates from the original
+  demo you copied this from (say "update from upstream").
+- `002-save-to-main.md`: save your work to the cloud (say "save to main").
+- `003-rebase-from-main.md`: update to the latest saved work (say "rebase from main").
+- `004-daily-summary.md`: a morning briefing from your calendar (scheduled, read-only).

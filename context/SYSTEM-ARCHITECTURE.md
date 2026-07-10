@@ -54,7 +54,7 @@ AI-Team-Demo/
 ├── projects/           # active work, one folder per project
 ├── context/            # GOLDEN-RULES, INDEX, PRINCIPLES, PROFILE, VOICE, SYSTEM-ARCHITECTURE
 ├── roles/<role>/       # ROLE.md + MEMORY.md per role (cos, ea, qa, ciso)
-├── playbooks/          # welcome wizard + save/reload + daily summary
+├── playbooks/          # welcome wizard + update-from-upstream + save/reload + daily summary
 ├── scripts/            # token-cost report
 └── .claude/
     ├── agents/          # EA / QA / CISO manifests + _TEMPLATE.md (CoS is the main session)

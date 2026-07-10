@@ -1,4 +1,4 @@
-# 001 - Save to main
+# 002 - Save to main
 
 Save your work to the cloud. This hides git behind one friendly verb. Run it
 when the person says "save to main" (or just "save").
